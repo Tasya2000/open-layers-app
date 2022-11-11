@@ -7,8 +7,86 @@ const map = new Map({
   target: 'map',
   layers: [
     new TileLayer({
-      source: new OSM()
-    })
+      source: new TileWMS({
+        url: 'http://localhost:8080/geoserver/tis_af18/wms',
+        params: {'LAYERS': 'tis_af18:boundary', 'TILED': true, 'STYLES':'	SLD_boundary'},
+        serverType: 'geoserver',
+        // Countries have transparency, so do not fade tiles:
+        transition: 0,
+      }),
+    }),
+    new TileLayer({
+      source: new TileWMS({
+        url: 'http://localhost:8080/geoserver/tis_af18/wms',
+        params: {'LAYERS': 'tis_af18:wood', 'TILED': true, 'STYLES':'	SLD_wood_green'},
+        serverType: 'geoserver',
+        // Countries have transparency, so do not fade tiles:
+        transition: 0,
+      }),
+    }),
+    new TileLayer({
+    source: new TileWMS({
+      url: 'http://localhost:8080/geoserver/tis_af18/wms',
+      params: {'LAYERS': 'tis_af18:waterway', 'TILED': true, 'STYLES':'	SLD_waterway_blue'},
+      serverType: 'geoserver',
+      // Countries have transparency, so do not fade tiles:
+      transition: 0,
+    }),
+  }),
+  new TileLayer({
+    source: new TileWMS({
+      url: 'http://localhost:8080/geoserver/tis_af18/wms',
+      params: {'LAYERS': 'tis_af18:highway', 'TILED': true, 'STYLES':'	SLD_highway_gray'},
+      serverType: 'geoserver',
+      // Countries have transparency, so do not fade tiles:
+      transition: 0,
+    }),
+  }),
+  new TileLayer({
+    source: new TileWMS({
+      url: 'http://localhost:8080/geoserver/tis_af18/wms',
+      params: {'LAYERS': 'tis_af18:kindergarten', 'TILED': true, 'STYLES':'	SLD_kindergarten_pink'},
+      serverType: 'geoserver',
+      // Countries have transparency, so do not fade tiles:
+      transition: 0,
+    }),
+  }),
+  new TileLayer({
+    source: new TileWMS({
+      url: 'http://localhost:8080/geoserver/tis_af18/wms',
+      params: {'LAYERS': 'tis_af18:school', 'TILED': true, 'STYLES':'	SLD_school_purple'},
+      serverType: 'geoserver',
+      // Countries have transparency, so do not fade tiles:
+      transition: 0,
+    }),
+  }),
+  new TileLayer({
+    source: new TileWMS({
+      url: 'http://localhost:8080/geoserver/tis_af18/wms',
+      params: {'LAYERS': 'tis_af18:university', 'TILED': true, 'STYLES':'	SLD_university_purple'},
+      serverType: 'geoserver',
+      // Countries have transparency, so do not fade tiles:
+      transition: 0,
+    }),
+  }),
+  new TileLayer({
+    source: new TileWMS({
+      url: 'http://localhost:8080/geoserver/tis_af18/wms',
+      params: {'LAYERS': 'tis_af18:building', 'TILED': true, 'STYLES':'	SLD_building_black'},
+      serverType: 'geoserver',
+      // Countries have transparency, so do not fade tiles:
+      transition: 0,
+    }),
+  }),
+  new TileLayer({
+    source: new TileWMS({
+      url: 'http://localhost:8080/geoserver/tis_af18/wms',
+      params: {'LAYERS': 'tis_af18:water', 'TILED': true, 'STYLES':'	SLD_water_blue'},
+      serverType: 'geoserver',
+      // Countries have transparency, so do not fade tiles:
+      transition: 0,
+    }),
+  }),
   ],
   view: new View({
     center: fromLonLat([90.495240, 56.269501]),
