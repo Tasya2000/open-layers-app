@@ -7,6 +7,9 @@ const map = new Map({
   target: 'map',
   layers: [
     new TileLayer({
+      source: new OSM()
+    }),
+    new TileLayer({
       source: new TileWMS({
         url: 'http://localhost:8080/geoserver/tis_af18/wms',
         params: {'LAYERS': 'tis_af18:boundary', 'TILED': true, 'STYLES':'	SLD_boundary'},
