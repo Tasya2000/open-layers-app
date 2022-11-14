@@ -78,7 +78,7 @@ top: 22px;
       content: "\f002";
       font-family: FontAwesome;
       font-size: 16px;
-      color: #F9F0DA;
+      color: #0a0a0a;
   }
   
   .d4{
@@ -96,6 +96,16 @@ top: 22px;
     line-height: 1px;
     }
 
+  .module_4{
+    position: absolute;
+width: 1865px;
+height: 59px;
+left: 0px;
+top: 965px;
+background: #D9D9D9;
+display: flex;
+flex-flow: row;
+  }
   
 #map {
   position: absolute;
