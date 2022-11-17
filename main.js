@@ -93,6 +93,7 @@ const map = new Map({
     }),
   }),
   ],
+ 
   view: new View({
     center: fromLonLat([90.495237, 56.269501]),
     zoom: 12
