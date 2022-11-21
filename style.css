@@ -158,35 +158,6 @@ flex-basis: 70%;
     padding: 6px 12px;
     border-top: none;
   }
-  
-/* .Rectangular{
-    position: absolute;
-    width: 448px;
-    height: 72px;
-    left: 0px;
-    top: 79px;
-    background: rgba(13, 118, 151, 0.41);
-    color: #FFFFFF;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 1px;
-    display: flex;
-    align-items: center;
-   justify-content: space-evenly;
-   flex-wrap: wrap;
-  }
-.Rectangular_2{
-    position: absolute;
-width: 448px;
-height: 815px;
-left: 0px;
-top: 151px;
-background: rgba(151, 151, 151, 0.33); 
-display: flex;
-justify-content: center; */
-  /* } */
 #map {
   position: absolute;
   height: 884px;
