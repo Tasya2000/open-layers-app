@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Первый запуск openlayers (git)</title>
     <script type="module" crossorigin src="/open-layers-app/assets/index.499317b1.js"></script>
-    <link rel="stylesheet" href="/open-layers-app/assets/index.109785ed.css">
+    <link rel="stylesheet" href="/open-layers-app/assets/index.dc3a334c.css">
   </head>
   <body>
   <div class="module_1">
@@ -23,9 +23,9 @@
     </div> 
 
     <div class="tab">
-      <button class="tablinks" onclick="open(event, 'Слои')">Слои</button>
-      <button class="tablinks" onclick="open(event, 'Вид')">Вид</button>
-      <button class="tablinks" onclick="open(event, 'Подробно')">Подробно о проблеме</button>
+      <button class="tablinks" onclick="reveal(event, 'Слои')">Слои</button>
+      <button class="tablinks" onclick="reveal(event, 'Вид')">Вид</button>
+      <button class="tablinks" onclick="reveal(event, 'Подробно')">Подробно о проблеме</button>
     </div>
 
     <div id="Слои" class="tabcontent">
@@ -76,7 +76,7 @@
       <h3>Подробно о проблеме</h3>
     </div>
     <script>
-      function open(evt, Name) {
+      function reveal(evt, Name) {
         var i, tabcontent, tablinks;
         tabcontent = document.getElementsByClassName("tabcontent");
         for (i = 0; i < tabcontent.length; i++) {
