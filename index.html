@@ -28,69 +28,252 @@
 
     <div id="Слои" class="tabcontent">
       <h3>Слои</h3>
-      <div class="dropdown">
-        <button class="dropbtn">Транспорт</button>
-        <div class="dropdown-content">
-        <a href="#">Яма</a>
-        <a href="#">Брошенная машина</a>
-        <a href="#">Машина на газоне</a>
-        <a href="#">Уборка</a>
-        <a href="#">Другое</a>
-        </div>
-        </div>
-        <div class="dropdown1">
-          <button class="dropbtn1">Жилищный фонд</button>
-          <div class="dropdown-content1">
-          <a href="#">Строящиймя объект</a>
-          <a href="#">Аварийный объект</a>
-          <a href="#">Объект культурного наследия</a>
-          <a href="#">Другое</a>
-          </div>
-          </div>
-          <div class="dropdown2">
-            <button class="dropbtn2">Благоустройство</button>
-            <div class="dropdown-content2">
-            <a href="#">Освещение</a>
-            <a href="#">МАФ</a>
-            <a href="#">Аварийные площадки</a>
-            <a href="#">Другое</a>
-            </div>
-            </div>
-            <div class="dropdown3">
-              <button class="dropbtn3">Озеленение</button>
-              <div class="dropdown-content3">
-              <a href="#">Сатнитарная обрезка</a>
-              <a href="#">Аварийные деревья</a>
-              <a href="#">Другое</a>
-              </div>
-              </div>
-              <div class="dropdown4">
-                <button class="dropbtn4">Безопасность</button>
-                <div class="dropdown-content4">
-                <a href="#">Полиция</a>
-                <a href="#">Медицина</a>
-                <a href="#">Пожарная часть</a>
-                <a href="#">Другое</a>
-                </div>
-                </div>
-                <div class="dropdown5">
-                  <button class="dropbtn5">Мобильность</button>
-                  </div>
-    </div>
+    <button class="accordion">Транспорт</button>
+<div class="panel">
+  <div>
+    <input type="checkbox" id="cb1"> <label for="cb1">Яма</label>
+  </div>
+  <div>
+    <input type="checkbox" id="cb2"> <label for="cb2">Брошенная машина</label>
+  </div>
+  <div>
+    <input type="checkbox" id="cb3"> <label for="cb3">Машина на газоне</label>
+  </div>
+  <div>
+    <input type="checkbox" id="cb4"> <label for="cb4">Уборка</label>
+  </div>
+  <div>
+    <input type="checkbox" id="cb5"> <label for="cb5">Другое</label>
+  </div>
+</div>
+<button class="accordion_2">Жилье</button>
+<div class="panel_2">
+  <div>
+    <input type="checkbox_2" id="cb6"> <label for="cb6">Строящийся объект</label>
+  </div>
+  <div>
+    <input type="checkbox_2" id="cb7"> <label for="cb7">Аварийный объект</label>
+  </div>
+  <div>
+    <input type="checkbox_2" id="cb8"> <label for="cb8">Объект культурного наследия</label>
+  </div>
+  <div>
+    <input type="checkbox_2" id="cb9"> <label for="cb9">ЖКХ</label>
+  </div>
+  <div>
+    <input type="checkbox_2" id="cb10"> <label for="cb10">Другое</label>
+  </div>
+</div>
+<button class="accordion_3">Благоустройство</button>
+<div class="panel_3">
+  <div>
+    <input type="checkbox_3" id="cb11"> <label for="cb11">Освещение</label>
+  </div>
+  <div>
+    <input type="checkbox_3" id="cb12"> <label for="cb12">МАФ</label>
+  </div>
+  <div>
+    <input type="checkbox_3" id="cb13"> <label for="cb13">Аварийные площадки</label>
+  </div>
+  <div>
+    <input type="checkbox_3" id="cb14"> <label for="cb14">Некачественное покрытие</label>
+  </div>
+  <div>
+    <input type="checkbox_3" id="cb15"> <label for="cb15">Другое</label>
+  </div>
+</div>
+<button class="accordion_4">Озеленение</button>
+<div class="panel_4">
+  <div>
+    <input type="checkbox_4" id="cb16"> <label for="cb16">Санитарная обрезка</label>
+  </div>
+  <div>
+    <input type="checkbox_4" id="cb17"> <label for="cb17">Аварийне озеленение</label>
+  </div>
+  <div>
+    <input type="checkbox_4" id="cb18"> <label for="cb18">Вытоптанные участки</label>
+  </div>
+  <div>
+    <input type="checkbox_4" id="cb19"> <label for="cb19">Другое</label>
+  </div>
+</div>
+<button class="accordion_5">Безопасность</button>
+<div class="panel_5">
+  <div>
+    <input type="checkbox_5" id="cb20"> <label for="cb20">Полиция</label>
+  </div>
+  <div>
+    <input type="checkbox_5" id="cb21"> <label for="cb21">Медицина</label>
+  </div>
+  <div>
+    <input type="checkbox_5" id="cb22"> <label for="cb22">Пожарная часть</label>
+  </div>
+  <div>
+    <input type="checkbox_5" id="cb23"> <label for="cb23">Другое</label>
+  </div>
+</div>
+<button class="accordion_6">Мобильность</button>
+<div class="panel_6">
+  <div>
+    <input type="checkbox_6" id="cb24"> <label for="cb24">Пандусы</label>
+  </div>
+  <div>
+    <input type="checkbox_6" id="cb25"> <label for="cb25">Другое</label>
+  </div>
+</div>
+</div>
+
+<script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+  
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  }
+  </script>
+  <script>
+    var acc = document.getElementsByClassName("accordion_2");
+    var i;
     
-    <div id="Вид" class="tabcontent">
-      <h3>Вид</h3>
-      <ul class="Яндекс"> Яндекс
-        <li>Карта</li>
-        <li>Спутник</li>
-        <li>Гибрид</li>
-      </ul>
-      <ul class="OpenStreetMap"> OpenStreetMap</ul>
-    </div>
-    
-    <div id="Подробно" class="tabcontent">
-      <h3>Подробно о проблеме</h3>
-    </div>
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+    </script> 
+    <script>
+      var acc = document.getElementsByClassName("accordion_3");
+      var i;
+      
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      }
+      </script> 
+      <script>
+        var acc = document.getElementsByClassName("accordion_4");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+              panel.style.display = "none";
+            } else {
+              panel.style.display = "block";
+            }
+          });
+        }
+        </script> 
+        <script>
+          var acc = document.getElementsByClassName("accordion_5");
+          var i;
+          
+          for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+              this.classList.toggle("active");
+              var panel = this.nextElementSibling;
+              if (panel.style.display === "block") {
+                panel.style.display = "none";
+              } else {
+                panel.style.display = "block";
+              }
+            });
+          }
+          </script> 
+          <script>
+            var acc = document.getElementsByClassName("accordion_6");
+            var i;
+            
+            for (i = 0; i < acc.length; i++) {
+              acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                  panel.style.display = "none";
+                } else {
+                  panel.style.display = "block";
+                }
+              });
+            }
+            </script> 
+
+
+<div id="Вид" class="tabcontent">
+  <h3>Вид</h3>
+  <button class="accordion_7">OpenStreetMap</button>
+<div class="panel_7">
+<div>
+<input type="checkbox_7" id="cb26"> <label for="cb26">OpenstreetMap</label>
+</div>
+</div>
+<button class="accordion_8">Яндекс</button>
+<div class="panel_8">
+<div>
+<input type="checkbox_8" id="cb27"> <label for="cb27">Карта</label>
+</div>
+<div>
+<input type="checkbox_8" id="cb28"> <label for="cb28">Спутник</label>
+</div>
+<div>
+<input type="checkbox_8" id="cb29"> <label for="cb29">Гибрид</label>
+</div>
+</div>
+</div>
+<script>
+  var acc = document.getElementsByClassName("accordion_7");
+  var i;
+  
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  }
+  </script> 
+    <script>
+      var acc = document.getElementsByClassName("accordion_8");
+      var i;
+      
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      }
+      </script> 
     <script>
       function reveal(evt, Name) {
         var i, tabcontent, tablinks;
