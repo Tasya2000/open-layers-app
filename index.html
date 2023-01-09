@@ -5,23 +5,21 @@
     <link rel="icon" type="image/x-icon" href="https://openlayers.org/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ачинск</title>
-    <script type="module" crossorigin src="/open-layers-app/assets/index.499317b1.js"></script>
-    <link rel="stylesheet" href="/open-layers-app/assets/index.99d43ae3.css">
+    <script type="module" crossorigin src="/open-layers-app/assets/index.a79a6ff2.js"></script>
+    <link rel="stylesheet" href="/open-layers-app/assets/index.e3d35b1f.css">
   </head>
   <body>
   <div class="module_1">
       <h1 class="d0">Проблемы города Ачинск</h1>
-       <p class="d1">Сообщить о проблеме </p>
     <p class="d2">Поиск</p> 
     <div class="d3">
       <form>
       <input type="text" placeholder="Искать здесь...">
       <button type="submit"></button>
       </form>
-      </div>
-  <p class="d4">Войти</p>
-    </div> 
-
+    </div>
+  </div>
+   
     <div class="tab">
       <button class="tablinks" onclick="reveal(event, 'Слои')">Слои</button>
       <button class="tablinks" onclick="reveal(event, 'Вид')">Вид</button>
@@ -118,7 +116,7 @@
     <input type="checkbox" id="cb23"> <label for="cb23">Другое</label>
   </div>
 </div>
-<button class="accordion">Мобильность</button>
+<button class="accordion_6">Мобильность</button>
 <div class="panel_6">
   <div>
     <input type="checkbox" id="cb24"> <label for="cb24">Пандусы</label>
@@ -304,7 +302,87 @@
      <p class="m5">	&#128712;</p>
     </div>
 
-    <div id="map"></div>
+
+
+
+    <div class="tab2">
+    <button class="regButton" onclick="show('block')" >Вход</button>
+      <div onclick="show('none1')" id="gray1"></div>
+    <div id="window1">
+      <div class="form1">
+          <h2>Вход</h2>
+          <form action="index.html" name="f2">
+              <input type="email1" placeholder="Email" name="email11" class="input1">
+              <input type="password1" placeholder="Пароль" name="pass11" class="input1">
+              <button id="send">Войти</button>
+          </form>
+      </div>
+    </div>
+    
+    <script>
+    function show(state)
+    {
+    document.getElementById('window1').style.display1 = state;	
+    document.getElementById('gray1').style.display1 = state; 		
+    }	
+    </script>   
+</div>
+<div class="tab3">
+    <button class="regButton2" onclick="show('block')" >Регистрация</button>
+      <div onclick="show('none')" id="gray"></div>
+    <div id="window">
+      <div class="form">
+          <h2>Регистрация</h2>
+          <form action="index.html" name="f1">
+              <input type="text" placeholder="Имя" name="name1" class="input">
+              <input type="email" placeholder="Email" name="email1" class="input">
+              <input type="password" placeholder="Пароль" name="pass1" class="input">
+              <input type="password" placeholder="Подтвердите пароль" name="pass2" class="input"> Вы подтверждаете, что прочитали и согласны с условиями пользования и политикой конфиденциальности.
+              <button id="send">Зарегистрироваться</button>
+          </form>
+      </div>
+    </div>
+    
+    <script>
+    function show(state)
+    {
+    document.getElementById('window').style.display = state;	
+    document.getElementById('gray').style.display = state; 		
+    }	
+    </script>   
+</div>
+
+
+  <button class="regButton3" onclick="show('block')" >Сообщить о проблеме</button>
+    <div onclick="show('none')" id="gray3"></div>
+  <div id="window3">
+    <div class="form3">
+        <h2>Сообщить о проблеме</h2>
+        <form id="contact" action="#" method="post" name="contact">
+          <input id="name" class="txt" name="name" type="name" placeholder="Ваше имя">
+          <input id="phone" class="txt" name="phone" type="phone" placeholder="Ваш телефон"> 
+          <input id="email" class="txt" name="email" type="email" placeholder="Ваш e-mail"> 
+          <textarea id="msg" class="txtarea" name="msg" placeholder="Ваше сообщение:"></textarea>
+          <button id="send">Отправить</button></form>
+        
+    </div>
+  </div>
+  <script>
+  function show(state)
+  {
+  document.getElementById('window3').style.display = state;	
+  document.getElementById('gray3').style.display = state; 		
+  }	
+  </script>   
+
+
+
+
+ <!-- <div id="map2">
+  <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Яндекс Карты</a><a href="https://yandex.ru/maps/?ll=90.595191%2C56.281288&utm_medium=mapframe&utm_source=maps&z=11.46" style="color:#eee;font-size:12px;position:absolute;top:14px;">Яндекс Карты</a><iframe src="https://yandex.ru/map-widget/v1/-/CCUvaYdu2C" width="1417" height="884" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+  </div>  -->
+  
+  <div id="map"></div>
     
   </body>
 </html>
