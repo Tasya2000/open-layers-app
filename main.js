@@ -23,6 +23,15 @@ const map = new Map({
     new TileLayer({
       source: new TileWMS({
         url: 'http://localhost:8080/geoserver/tis_af18/wms',
+        params: {'LAYERS': 'tis_af18:floor', 'TILED': true, 'STYLES':'	floor'},
+        serverType: 'geoserver',
+        // Countries have transparency, so do not fade tiles:
+        transition: 0,
+      }),
+    }),
+    new TileLayer({
+      source: new TileWMS({
+        url: 'http://localhost:8080/geoserver/tis_af18/wms',
         params: {'LAYERS': 'tis_af18:wood', 'TILED': true, 'STYLES':'	SLD_wood_green'},
         serverType: 'geoserver',
         // Countries have transparency, so do not fade tiles:
@@ -41,7 +50,7 @@ const map = new Map({
   new TileLayer({
     source: new TileWMS({
       url: 'http://localhost:8080/geoserver/tis_af18/wms',
-      params: {'LAYERS': 'tis_af18:highway', 'TILED': true, 'STYLES':'	SLD_highway_gray'},
+      params: {'LAYERS': 'tis_af18:highway', 'TILED': true, 'STYLES':'	SLD_highway_2'},
       serverType: 'geoserver',
       // Countries have transparency, so do not fade tiles:
       transition: 0,
